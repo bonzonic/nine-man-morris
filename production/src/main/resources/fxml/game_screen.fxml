@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="stackPane" stylesheets="@css/game_screen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ninemanmorris.screen.screencontroller.gamescreen.GameScreenController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="720.0" prefWidth="860.0" spacing="20.0" style="-fx-background-image: url('file:src/main/resources/img/9mm_map.png'); -fx-background-size: 860;">
+      <!-- For scene builder -->
+      <!-- For Nic -->
+      
+      <!-- <VBox alignment="CENTER" prefHeight="720.0" prefWidth="860.0" spacing="20.0" style="-fx-background-image: url('file:D:/Year_3_Sem_1/FIT3077/Assignment/project/production/src/main/resources/img/9mm_map.png'); -fx-background-size: 860;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ninemanmorris.Game.GameScreenController">  -->
+      <!-- For Christine -->
+      
+      <!-- <VBox alignment="CENTER" prefHeight="720.0" prefWidth="860.0" spacing="20.0" style="-fx-background-image: url('file:/users/christinechiongcy/Documents/Y3S1/FIT3077/project/production/src/main/resources/img/9mm_map.png'); -fx-background-size: 860;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ninemanmorris.Game.GameController">  -->
+          <children>
+              <AnchorPane fx:id="mainPane" prefHeight="720" prefWidth="720">
+               <VBox alignment="CENTER" layoutY="491.0" maxWidth="-Infinity" prefHeight="70.0">
+                  <children>
+                        <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" prefHeight="40.0" prefWidth="41.0" spacing="5.0">
+                            <Label fx:id="red_token_count" text="9">
+                            <font>
+                              <Font name="Calibri" size="30.0" />
+                            </font>
+                           </Label>
+                            <ImageView fx:id="red_token" fitHeight="40" fitWidth="40" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../img/9mm_token_red.png" />
+                              </image>
+                           </ImageView>
+                        </HBox>
+                     <Text fx:id="player1Txt" opacity="0.62" text="Player 1" wrappingWidth="73.763671875">
+                        <font>
+                           <Font name="Galvji" size="18.0" />
+                        </font>
+                        <effect>
+                           <Blend />
+                        </effect>
+                     </Text>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER_RIGHT" layoutX="727.0" layoutY="491.0" maxWidth="-Infinity" prefHeight="70.0" prefWidth="95.0">
+                  <children>
+                     <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="40.0" prefWidth="28.0" spacing="5">
+                        <children>
+                           <Label fx:id="blue_token_count" text="9">
+                              <font>
+                                 <Font name="Calibri" size="30.0" />
+                              </font>
+                           </Label>
+                           <ImageView fx:id="blue_token" fitHeight="40" fitWidth="40" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../img/9mm_token_blue.png" />
+                              </image>
+                           </ImageView>
+                        </children>
+                     </HBox>
+                     <Text fx:id="player2Txt" opacity="0.62" text="Player 2" textAlignment="RIGHT" wrappingWidth="93.9747314453125">
+                        <font>
+                           <Font name="Galvji" size="18.0" />
+                        </font>
+                        <effect>
+                           <Blend />
+                        </effect>
+                     </Text>
+                  </children>
+               </VBox>
+               <GridPane fx:id="grid" gridLinesVisible="false" layoutX="91.0" layoutY="21.0" prefHeight="637.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+                 <columnConstraints>
+                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="95.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="384.79998779296875" minWidth="0.0" prefWidth="95.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="319.4000244140625" minWidth="0.0" prefWidth="95.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="319.4000244140625" minWidth="10.0" prefWidth="95.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="374.8000366210938" minWidth="10.0" prefWidth="95.0" />
+                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.5999877929687" minWidth="0.0" prefWidth="95.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.00000000000006" minWidth="10.0" prefWidth="95.0" />
+                 </columnConstraints>
+                 <rowConstraints>
+                   <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="95.0" vgrow="SOMETIMES" />
+                   <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="95.0" vgrow="SOMETIMES" />
+                   <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+                     <RowConstraints maxHeight="389.4" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+                     <RowConstraints maxHeight="248.0000061035156" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+                     <RowConstraints maxHeight="207.6000427246094" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+                     <RowConstraints maxHeight="189.60001220703123" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+                 </rowConstraints>
+               </GridPane>
+               <HBox alignment="TOP_CENTER" layoutX="458.0" prefHeight="40.0" prefWidth="362.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                        <Text fx:id="move_quote" fill="RED" opacity="0.62" text="Place your tokens on the board" textAlignment="CENTER">
+                        <font>
+                           <Font name="Galvji" size="24.0" />
+                        </font>
+                        <effect>
+                           <Blend />
+                        </effect>
+                     </Text>
+                  </children>
+               </HBox>
+               <Button fx:id="pauseBtn" layoutX="755.0" mnemonicParsing="false" onAction="#pauseGame" opacity="1.0" prefHeight="50.0" prefWidth="50.0" style="-fx-cursor: hand; -fx-background-color: transparent;">
+                  <graphic>
+                     <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../img/9mm_pause.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <HBox alignment="BOTTOM_CENTER" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <children>
+                     <Text fx:id="turn" opacity="0.62" text="Player _'s">
+                        <font>
+                           <Font name="Galvji" size="24.0" />
+                        </font>
+                        <effect>
+                           <Blend />
+                        </effect>
+                     </Text>
+                     <Text opacity="0.62" text="  Turn!">
+                        <font>
+                           <Font name="Galvji" size="24.0" />
+                        </font>
+                        <effect>
+                           <Blend />
+                        </effect>
+                     </Text>
+                  </children>
+               </HBox>
+              </AnchorPane>
+          </children>
+          <padding>
+              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+      </VBox>
+      <AnchorPane fx:id="pausePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="860.0" style="-fx-background-size: 600; -fx-background-color: rgba(3, 0, 33, 0.5);">
+      <children>
+         <ImageView fitHeight="442.0" fitWidth="605.0" layoutX="137.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../img/9mm_pause_background.png" />
+      </image>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#d0ad7d" height="122.0" layoutX="232.0" layoutY="57.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="4.0" width="406.0" /> 
+      <Text fill="#251718" layoutX="237.0" layoutY="137.0" text="Pause Menu" textAlignment="CENTER" wrappingWidth="399.51287841796875">
+         <font>
+         <Font name="Galvji" size="48.0" />
+         </font>
+      </Text>            
+            <Button layoutX="287.0" layoutY="200.0" mnemonicParsing="false" onAction="#restartGame" opacity="1.0" prefHeight="115.0" prefWidth="115.0" style="-fx-background-radius: 50; -fx-cursor: hand; -fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="115.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/9mm_reload.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="472.0" layoutY="200.0" mnemonicParsing="false" onAction="#backToMenu" opacity="1.0" prefHeight="115.0" prefWidth="115.0" style="-fx-background-radius: 50; -fx-cursor: hand; -fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="115.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/9mm_menu.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="287.0" layoutY="351.0" mnemonicParsing="false" onAction="#resumeGame" opacity="1.0" prefHeight="106.0" prefWidth="300.0" style="-fx-background-color: #d0ad7d; -fx-background-radius: 25; -fx-border-radius: 20; -fx-border-width: 5; -fx-border-color: #251718; -fx-cursor: hand;" text="Resume" textAlignment="CENTER" textFill="white">
+               <font>
+                  <Font name="Galvji" size="48.0" />
+               </font>
+            </Button>
+      </children>
+      </AnchorPane>
+<VBox fx:id="resultScreen" alignment="CENTER" prefHeight="720.0" prefWidth="860.0" spacing="20.0" style="-fx-background-image: url('file:src/main/resources/img/9mm_result.png');  -fx-background-size: 860;">
+
+         <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="480.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Text fx:id="playerWonTxt" fill="#513d24" layoutX="26.0" layoutY="151.0" opacity="0.62" text="Player 1 Won!" textAlignment="CENTER" wrappingWidth="427.2000732421875">
+               <font>
+                  <Font name="Galvji" size="32.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="55.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/9mm_token_red.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="267.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/9mm_token_blue.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="resPlayer1Txt" layoutX="100.0" layoutY="396.0" opacity="0.62" text="Player 1" textAlignment="CENTER" wrappingWidth="70.40011596679688">
+               <font>
+                  <Font name="Galvji" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="resPlayer2Txt" layoutX="301.0" layoutY="395.0" opacity="0.62" text="Player 2" textAlignment="CENTER" wrappingWidth="99.13571166992188">
+               <font>
+                  <Font name="Galvji" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="counterTxt" layoutX="205.0" layoutY="395.0" opacity="0.62" textAlignment="CENTER" wrappingWidth="70.40011596679688">
+               <font>
+                  <Font name="Galvji" size="18.0" />
+               </font>
+            </Text>
+            <Button layoutX="258.0" layoutY="432.0" mnemonicParsing="false" onAction="#restartGame" opacity="1.0" prefHeight="78.0" prefWidth="177.0" style="-fx-cursor: hand; -fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="78.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/9mm_rematch.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="26.0" layoutY="429.0" mnemonicParsing="false" onAction="#backToMenu" opacity="1.0" prefHeight="78.0" prefWidth="178.0" style="-fx-cursor: hand; -fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="78.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/9mm_return_to_menu.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
+
+   </children>
+</StackPane>
